@@ -44,7 +44,7 @@ Custom error codes (E_INSUFFICIENT_BALANCE, E_INVALID_AMOUNT)
 
 Smart Contract Structure
 plaintextCopyCDOPosition {
-    token_amount: u64     // Position size in tokens
+    token_amount: u64     // Positidion size in tokens
     maturity_date: u64    // Maturity timestamp
     is_transferred: bool  // Transfer status
 }
@@ -54,7 +54,17 @@ bashCopy# Create CDO Position
 aptos move run \
     --function-id 0x1234...5678::CDOTransfer::create_cdo_position \
     --args u64:1000 u64:30 \
-    --gas-unit-price 100
+    --gas-unit-price 1003
+    
+    4.Transaction and transaction ID
+    
+Transaction ID - <'0xf568b6a95d46bfe08cecb0d804c7e34400f414198c5a9966ff48fedcc5f64a6d'>
+
+
+<img src="https://github.com/user-attachments/assets/27b4dd54-710d-4e7e-9a9e-e606257398f0" alt="Sample Image" width="500">
+
+
+    
 
 # Transfer to Investor
 aptos move run \
